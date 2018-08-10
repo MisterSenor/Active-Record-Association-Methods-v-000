@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
 
   def get_genre_name
     self.genre.collect do |g|
-      g.name 
+      g.name
     end 
   end
 
