@@ -4,6 +4,7 @@ class Artist < ActiveRecord::Base
 
   def get_genre_of_first_song
     self.songs.first.genre
+    binding.pry
   end
 
   def song_count
