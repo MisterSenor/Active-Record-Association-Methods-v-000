@@ -11,7 +11,10 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.collect 
+    self.artists.collect do |a|
+      a.name 
+    end 
+  end 
     #=> => [#<Artist:0x0000000434ea50 id: 1, name: "MJ">,
  #<Artist:0x00000004363568 id: 2, name: "Adele">,
  #<Artist:0x0000000436d568 id: 3, name: "James Brown">]
